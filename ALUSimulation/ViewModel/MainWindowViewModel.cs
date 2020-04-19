@@ -15,7 +15,7 @@ namespace ALUSimulation.ViewModel
 
         #region variable
 
-        private string _Wynik = "0";
+        private string _Wynik = "00000000";
         private string _OperandA = "0111";
         private string _OperandB = "0111";
         private List<string> _ListaOperacji;
@@ -23,8 +23,8 @@ namespace ALUSimulation.ViewModel
         private bool _IsCheckedBox1;
         private bool _IsCheckedBox2 = false;
         private bool _IsCheckedBox3 = false;
-        private string _WynikALU1 = "00001";
-        private string _WynikALU2 = "00011";
+        private string _WynikALU1 = "00000000";
+        private string _WynikALU2 = "11111111";
         private string _WynikALU3 = "00111";
         #endregion
 
