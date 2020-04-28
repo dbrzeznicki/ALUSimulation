@@ -75,7 +75,7 @@ namespace ALUSimulation.ViewModel
         {
             get
             {
-                _ListaOperacji = new List<string> { "OR", "AND", "XOR" };
+                _ListaOperacji = new List<string> { "OR", "AND", "XOR","ADD","SUB" };
                 return _ListaOperacji;
             }
         }
@@ -194,7 +194,7 @@ namespace ALUSimulation.ViewModel
         public void Start()
         {
             var rand = new Random();
-            Wynik = rand.Next(10, 100).ToString();
+           // Wynik = rand.Next(10, 100).ToString();
         }
     }
 }

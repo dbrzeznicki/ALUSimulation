@@ -61,7 +61,7 @@
                     <GroupBox Margin="10" Header="START">
                         <StackPanel>
 
-                            <Button Content="Start" Margin="10" Command="{Binding StartButton}"/>
+                            <Button Content="Start" Margin="10" Command="{Binding StartButton}" Click="Button_Click"/>
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="Wynik: " Margin="10"/>
                                 <Label Content="{Binding Wynik}" Margin="10"/>
