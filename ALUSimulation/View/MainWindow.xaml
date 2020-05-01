@@ -129,36 +129,36 @@
                         <Label Grid.Column="0" Grid.Row="2" Content="{Binding OperandA}" Margin="10"/>
                         <Label Grid.Column="0" Grid.Row="2" Content="{Binding OperandB}" Margin="10,42,10,10"/>
 
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor1}" StrokeThickness="3"
                         X1="153" Y1="40"
                         X2="230" Y2="40"
                         />
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor1}" StrokeThickness="3"
                         X1="229" Y1="40"
                         X2="229" Y2="110"
                         />
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor1}" StrokeThickness="3"
                         X1="228" Y1="110"
                         X2="286" Y2="110"
                         />
                         <Label Grid.Column="2" Grid.Row="0" Content="{Binding WynikALU1}" Margin="-20,10,10,10"/>
 
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor3}" StrokeThickness="3"
                         X1="153" Y1="200"
                         X2="230" Y2="200"
                         />
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor3}" StrokeThickness="3"
                         X1="229" Y1="200"
                         X2="229" Y2="130"
                         />
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor3}" StrokeThickness="3"
                         X1="286" Y1="130"
                         X2="228" Y2="130"
                         />
                         <Label Grid.Column="2" Grid.Row="2" Content="{Binding WynikALU3}" Margin="-20,10,10,10"/>
-                        
-                        
-                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
+
+
+                        <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor2}" StrokeThickness="3"
                         X1="153" Y1="120"
                         X2="286" Y2="120"
                         />

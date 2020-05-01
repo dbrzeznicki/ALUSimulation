@@ -16,8 +16,8 @@ namespace ALUSimulation.ViewModel
         #region variable
 
         private string _Wynik = "00000000";
-        private string _OperandA = "0111";
-        private string _OperandB = "0111";
+        private string _OperandA = "11";
+        private string _OperandB = "11";
         private List<string> _ListaOperacji;
         private string _WybranaOperacja = "OR";
         private bool _IsCheckedBox1;
@@ -26,11 +26,55 @@ namespace ALUSimulation.ViewModel
         private string _WynikALU1 = "00000000";
         private string _WynikALU2 = "11111111";
         private string _WynikALU3 = "00111";
+
+        private string _StrokeColor1 = "BLACK";
+        private string _StrokeColor2 = "BLACK";
+        private string _StrokeColor3 = "BLACK";
+
         #endregion
 
 
 
         #region properties
+
+        public string StrokeColor1
+        {
+            get
+            {
+                return _StrokeColor1;
+            }
+            set
+            {
+                _StrokeColor1 = value;
+                RaisePropertyChanged("StrokeColor1");
+            }
+        }
+
+        public string StrokeColor2
+        {
+            get
+            {
+                return _StrokeColor2;
+            }
+            set
+            {
+                _StrokeColor2 = value;
+                RaisePropertyChanged("StrokeColor2");
+            }
+        }
+
+        public string StrokeColor3
+        {
+            get
+            {
+                return _StrokeColor3;
+            }
+            set
+            {
+                _StrokeColor3 = value;
+                RaisePropertyChanged("StrokeColor3");
+            }
+        }
 
         public string Wynik
         {
@@ -102,6 +146,10 @@ namespace ALUSimulation.ViewModel
             set
             {
                 _IsCheckedBox1 = value;
+                if(_IsCheckedBox1 == true)
+                    StrokeColor1 = "RED";
+                else
+                    StrokeColor1 = "Black";
                 RaisePropertyChanged("IsCheckedBox1");
             }
         }
@@ -115,6 +163,10 @@ namespace ALUSimulation.ViewModel
             set
             {
                 _IsCheckedBox2 = value;
+                if (_IsCheckedBox2 == true)
+                    StrokeColor2 = "RED";
+                else
+                    StrokeColor2 = "Black";
                 RaisePropertyChanged("IsCheckedBox2");
             }
         }
@@ -128,6 +180,10 @@ namespace ALUSimulation.ViewModel
             set
             {
                 _IsCheckedBox3 = value;
+                if (_IsCheckedBox3 == true)
+                    StrokeColor3 = "RED";
+                else
+                    StrokeColor3 = "Black";
                 RaisePropertyChanged("IsCheckedBox3");
             }
         }
