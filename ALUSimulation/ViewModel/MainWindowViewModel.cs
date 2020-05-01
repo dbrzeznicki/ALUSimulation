@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using TMRSim;
 
 namespace ALUSimulation.ViewModel
 {
@@ -249,8 +250,37 @@ namespace ALUSimulation.ViewModel
 
         public void Start()
         {
-            var rand = new Random();
-           // Wynik = rand.Next(10, 100).ToString();
+            bool checkOperandA = Utils.CheckOperandRange(int.Parse(OperandA));
+            bool checkOperandB = Utils.CheckOperandRange(int.Parse(OperandB));
+
+            if (checkOperandA && checkOperandB)
+            {
+                TMR tmr = new TMR();
+
+                sbyte a = sbyte.Parse(OperandA),
+                    b = sbyte.Parse(OperandB);
+                OPERATION_TYPE type = Utils.StringOperationToEnum(WybranaOperacja);
+
+                bool[] isErr = new bool[3];
+
+                isErr[0] = IsCheckedBox1;
+                isErr[1] = IsCheckedBox2;
+                isErr[2] = IsCheckedBox3;
+
+                tmr.SimulateOnce(a, b, type, isErr);
+
+                WynikALU1 = Utils.SbyteToBinaryString(tmr.GetALU_Result(0), 8);
+                WynikALU2 = Utils.SbyteToBinaryString(tmr.GetALU_Result(1), 8);
+                WynikALU3 = Utils.SbyteToBinaryString(tmr.GetALU_Result(2), 8);
+
+                string voter = Utils.SbyteToBinaryString(tmr.GetVoter_Result(), 8);
+
+                Wynik = voter;
+            } else
+            {
+                MessageBox.Show("Wartości operandów powinny być z zakresu <-128, 127>");
+            }
+
         }
     }
 }

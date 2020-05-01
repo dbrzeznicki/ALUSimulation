@@ -29,6 +29,15 @@ namespace TMRSim
 
             return (OPERATION_TYPE)Enum.Parse(typeof(OPERATION_TYPE),operation);
         }
+
+        public static bool CheckOperandRange(int operand)
+        {
+            if (operand < -128 || operand > 127)
+                return false;
+            else
+                return true;
+        }
+
     }
 
 
