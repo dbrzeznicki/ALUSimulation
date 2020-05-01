@@ -64,7 +64,7 @@
                             <Button Content="Start" Margin="10" Command="{Binding StartButton}"/>
                             <StackPanel Orientation="Horizontal">
                                 <Label Content="Wynik: " Margin="10"/>
-                                <Label Content="{Binding Wynik}" Margin="10"/>
+                                <Label Content="{Binding WynikDecimal}" Margin="10"/>
                             </StackPanel>
                             
                         </StackPanel>
@@ -104,8 +104,8 @@
                         X1="10" Y1="45"
                         X2="103" Y2="45"
                         />
-                        <Label Grid.Column="0" Grid.Row="0" Content="{Binding OperandA}" Margin="10"/>
-                        <Label Grid.Column="0" Grid.Row="0" Content="{Binding OperandB}" Margin="10,42,10,10"/>
+                        <Label Grid.Column="0" Grid.Row="0" Content="{Binding OperandABinary}" Margin="10"/>
+                        <Label Grid.Column="0" Grid.Row="0" Content="{Binding OperandBBinary}" Margin="10,42,10,10"/>
                         
                         <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
                         X1="10" Y1="115"
@@ -115,8 +115,8 @@
                         X1="10" Y1="125"
                         X2="103" Y2="125"
                         />
-                        <Label Grid.Column="0" Grid.Row="1" Content="{Binding OperandA}" Margin="10"/>
-                        <Label Grid.Column="0" Grid.Row="1" Content="{Binding OperandB}" Margin="10,42,10,10"/>
+                        <Label Grid.Column="0" Grid.Row="1" Content="{Binding OperandABinary}" Margin="10"/>
+                        <Label Grid.Column="0" Grid.Row="1" Content="{Binding OperandBBinary}" Margin="10,42,10,10"/>
 
                         <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="Black" StrokeThickness="3"
                         X1="10" Y1="195"
@@ -126,8 +126,8 @@
                         X1="10" Y1="205"
                         X2="103" Y2="205"
                         />
-                        <Label Grid.Column="0" Grid.Row="2" Content="{Binding OperandA}" Margin="10"/>
-                        <Label Grid.Column="0" Grid.Row="2" Content="{Binding OperandB}" Margin="10,42,10,10"/>
+                        <Label Grid.Column="0" Grid.Row="2" Content="{Binding OperandABinary}" Margin="10"/>
+                        <Label Grid.Column="0" Grid.Row="2" Content="{Binding OperandBBinary}" Margin="10,42,10,10"/>
 
                         <Line Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Stroke="{Binding StrokeColor1}" StrokeThickness="3"
                         X1="153" Y1="40"

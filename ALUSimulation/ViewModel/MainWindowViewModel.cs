@@ -17,26 +17,44 @@ namespace ALUSimulation.ViewModel
         #region variable
 
         private string _Wynik = "00000000";
-        private string _OperandA = "11";
-        private string _OperandB = "11";
+        private sbyte _WynikDecimal = 0;
+
+        private string _OperandA = "22";
+        private string _OperandB = "22";
         private List<string> _ListaOperacji;
         private string _WybranaOperacja = "OR";
-        private bool _IsCheckedBox1;
+        private bool _IsCheckedBox1 = false;
         private bool _IsCheckedBox2 = false;
         private bool _IsCheckedBox3 = false;
         private string _WynikALU1 = "00000000";
-        private string _WynikALU2 = "11111111";
-        private string _WynikALU3 = "00111";
+        private string _WynikALU2 = "00000000";
+        private string _WynikALU3 = "00000000";
 
         private string _StrokeColor1 = "BLACK";
         private string _StrokeColor2 = "BLACK";
         private string _StrokeColor3 = "BLACK";
+
+        private string _OperandABinary = "00000000";
+        private string _OperandBBinary = "00000000";
 
         #endregion
 
 
 
         #region properties
+
+        public sbyte WynikDecimal
+        {
+            get
+            {
+                return _WynikDecimal;
+            }
+            set
+            {
+                _WynikDecimal = value;
+                RaisePropertyChanged("WynikDecimal");
+            }
+        }
 
         public string StrokeColor1
         {
@@ -113,6 +131,34 @@ namespace ALUSimulation.ViewModel
             {
                 _OperandB = value;
                 RaisePropertyChanged("OperandB");
+            }
+        }
+
+        public string OperandABinary
+        {
+            get
+            {
+                _OperandABinary = Utils.SbyteToBinaryString(sbyte.Parse(_OperandA), 8);
+                return _OperandABinary;
+            }
+            set
+            {
+                _OperandABinary = value;
+                RaisePropertyChanged("OperandABinary");
+            }
+        }
+
+        public string OperandBBinary
+        {
+            get
+            {
+                _OperandBBinary = Utils.SbyteToBinaryString(sbyte.Parse(_OperandB), 8);
+                return _OperandBBinary;
+            }
+            set
+            {
+                _OperandBBinary = value;
+                RaisePropertyChanged("OperandBBinary");
             }
         }
 
@@ -273,9 +319,14 @@ namespace ALUSimulation.ViewModel
                 WynikALU2 = Utils.SbyteToBinaryString(tmr.GetALU_Result(1), 8);
                 WynikALU3 = Utils.SbyteToBinaryString(tmr.GetALU_Result(2), 8);
 
-                string voter = Utils.SbyteToBinaryString(tmr.GetVoter_Result(), 8);
+                WynikDecimal = tmr.GetVoter_Result();
+
+                string voter = Utils.SbyteToBinaryString(WynikDecimal, 8);
 
                 Wynik = voter;
+
+                RaisePropertyChanged("OperandABinary");
+                RaisePropertyChanged("OperandBBinary");
             } else
             {
                 MessageBox.Show("Wartości operandów powinny być z zakresu <-128, 127>");
