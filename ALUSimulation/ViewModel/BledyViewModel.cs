@@ -9,6 +9,8 @@ namespace ALUSimulation.ViewModel
 {
     public sealed class BledyViewModel : BindableBase
     {
+
+        #region singleton
         private static BledyViewModel m_oInstance = null;
 
         public static BledyViewModel Instance
@@ -22,7 +24,10 @@ namespace ALUSimulation.ViewModel
                 return m_oInstance;
             }
         }
+        #endregion
 
+
+        #region variable
         private bool _IsCheckedBox1 = false;
         private bool _IsCheckedBox2 = false;
         private bool _IsCheckedBox3 = false;
@@ -32,6 +37,11 @@ namespace ALUSimulation.ViewModel
         private string _StrokeColor2 = "BLACK";
         private string _StrokeColor3 = "BLACK";
 
+
+        #endregion
+
+
+        #region properties
         public bool IsCheckedBox1
         {
             get
@@ -121,6 +131,8 @@ namespace ALUSimulation.ViewModel
                 RaisePropertyChanged("StrokeColor3");
             }
         }
+
+        #endregion
 
     }
 }

@@ -10,7 +10,7 @@ namespace ALUSimulation.ViewModel
     public sealed class ALUViewModel : BindableBase
     {
 
-        #region Singleton
+        #region singleton
         private static ALUViewModel m_oInstance = null;
 
         public static ALUViewModel Instance
@@ -89,5 +89,6 @@ namespace ALUSimulation.ViewModel
         }
 
         #endregion
+
     }
 }

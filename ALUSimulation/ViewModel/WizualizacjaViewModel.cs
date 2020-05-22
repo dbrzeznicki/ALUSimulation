@@ -14,6 +14,7 @@ namespace ALUSimulation.ViewModel
     public sealed class WizualizacjaViewModel : BindableBase
     {
 
+        #region singleton
         private static WizualizacjaViewModel m_oInstance = null;
 
         public static WizualizacjaViewModel Instance
@@ -27,6 +28,9 @@ namespace ALUSimulation.ViewModel
                 return m_oInstance;
             }
         }
+
+        #endregion
+
 
         #region variable
 
@@ -42,6 +46,7 @@ namespace ALUSimulation.ViewModel
         ALUViewModel _ALUViewModel;
         BledyViewModel _BledyViewModel;
         #endregion
+
 
         #region properties
 
@@ -156,7 +161,6 @@ namespace ALUSimulation.ViewModel
             }
         }
         #endregion
-
 
     }
 }

@@ -14,6 +14,7 @@ namespace ALUSimulation.ViewModel
     public class StartViewModel : BindableBase
     {
 
+        #region singleton 
         private static StartViewModel m_oInstance = null;
 
         public static StartViewModel Instance
@@ -28,7 +29,14 @@ namespace ALUSimulation.ViewModel
             }
         }
 
+        #endregion
+
+
+        #region variable
+
         private sbyte _WynikDecimal = 0;
+
+        #endregion
 
 
         #region command
@@ -36,7 +44,6 @@ namespace ALUSimulation.ViewModel
         public ICommand StartButton { get; set; }
 
         #endregion
-
 
 
         #region constructor
@@ -47,6 +54,9 @@ namespace ALUSimulation.ViewModel
         }
 
         #endregion
+
+
+        #region properties
 
         public sbyte WynikDecimal
         {
@@ -61,8 +71,10 @@ namespace ALUSimulation.ViewModel
             }
         }
 
+        #endregion
 
 
+        #region method
 
         public void Start()
         {
@@ -104,5 +116,8 @@ namespace ALUSimulation.ViewModel
             }
 
         }
+
+        #endregion
+
     }
 }
