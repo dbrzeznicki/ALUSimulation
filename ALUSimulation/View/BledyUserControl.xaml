@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="ALUSimulation.View.BledyUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ALUSimulation.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="150">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+
+
+                <TextBlock Margin="10" Text="Jakis blad 1: "/>
+                <CheckBox Margin="10" IsChecked="{Binding IsCheckedBox1}"></CheckBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10" Text="Jakis blad 2: "/>
+                <CheckBox Margin="10" IsChecked="{Binding IsCheckedBox2}"></CheckBox>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin="10" Text="Jakis blad 3: "/>
+                <CheckBox Margin="10" IsChecked="{Binding IsCheckedBox3}"></CheckBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

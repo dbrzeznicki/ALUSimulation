@@ -72,6 +72,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="TMRSim\Voter.cs" />
+    <Page Include="View\ALUUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BledyUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\StartUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WizualizacjaUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -84,7 +100,22 @@
     <Compile Include="TMRSim\BaseThread.cs" />
     <Compile Include="TMRSim\TMR.cs" />
     <Compile Include="TMRSim\Utils.cs" />
-    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="ViewModel\ALUViewModel.cs" />
+    <Compile Include="ViewModel\BledyViewModel.cs" />
+    <Compile Include="ViewModel\WizualizacjaViewModel.cs" />
+    <Compile Include="ViewModel\StartViewModel.cs" />
+    <Compile Include="View\ALUUserControl.xaml.cs">
+      <DependentUpon>ALUUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BledyUserControl.xaml.cs">
+      <DependentUpon>BledyUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\StartUserControl.xaml.cs">
+      <DependentUpon>StartUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WizualizacjaUserControl.xaml.cs">
+      <DependentUpon>WizualizacjaUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
