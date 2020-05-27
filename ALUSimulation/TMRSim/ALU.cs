@@ -104,8 +104,6 @@ namespace TMRSim
 
                 _resetEvent.WaitOne();
 
-
-
                 _actVoter.Invoke(Calculate());
 
                 Reset();

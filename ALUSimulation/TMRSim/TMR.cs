@@ -39,9 +39,6 @@ namespace TMRSim
 
         public void SimulateOnce(sbyte operandA,sbyte operandB,OPERATION_TYPE operation,bool[] isErr)
         {
-
-            //Console.WriteLine("Symulacja rozpoczeta.");
-
             _voter.Start();
 
             var collection = _alu.Zip(isErr, (a, e) => new { a, e });
@@ -52,13 +49,10 @@ namespace TMRSim
                 item.a.SetOperandsAndOperation(operandA, operandB, operation, item.e);
             }
 
-
-
             foreach (var item in _alu)
                 item.Join();
 
             _voter.Join();
-
 
         }
     }

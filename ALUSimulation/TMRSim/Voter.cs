@@ -90,16 +90,9 @@ namespace TMRSim
 
         public override void RunThread()
         {
-
                 _resetEvent.WaitOne();
-
-
-
                 Result = GetResult();
-
-
                 Reset();
-
         }
     }
 }
