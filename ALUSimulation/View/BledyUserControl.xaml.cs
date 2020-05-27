@@ -13,18 +13,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TMRSim;
 
-namespace ALUSimulation
+namespace ALUSimulation.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BledyUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BledyUserControl : UserControl
     {
-        public MainWindow()
+        public BledyUserControl()
         {
             InitializeComponent();
-        }   
+            this.DataContext = BledyViewModel.Instance;
+        }
     }
 }

@@ -13,18 +13,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using TMRSim;
 
-namespace ALUSimulation
+namespace ALUSimulation.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for StartUserControl.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartUserControl : UserControl
     {
-        public MainWindow()
+        public StartUserControl()
         {
             InitializeComponent();
-        }   
+            this.DataContext = StartViewModel.Instance;
+        }
     }
 }
