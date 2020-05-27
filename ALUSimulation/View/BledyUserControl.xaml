@@ -11,17 +11,17 @@
             <StackPanel Orientation="Horizontal">
 
 
-                <TextBlock Margin="10" Text="Jakis blad 1: "/>
+                <TextBlock Margin="10" Text="WYJ. ALU0"/>
                 <CheckBox Margin="10" IsChecked="{Binding IsCheckedBox1}"></CheckBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="10" Text="Jakis blad 2: "/>
+                <TextBlock Margin="10" Text="WYJ. ALU1"/>
                 <CheckBox Margin="10" IsChecked="{Binding IsCheckedBox2}"></CheckBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBlock Margin="10" Text="Jakis blad 3: "/>
+                <TextBlock Margin="10" Text="WYJ. ALU2"/>
                 <CheckBox Margin="10" IsChecked="{Binding IsCheckedBox3}"></CheckBox>
             </StackPanel>
         </StackPanel>
