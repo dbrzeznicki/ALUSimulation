@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMRSim;
 
 namespace ALUSimulation.ViewModel
 {
@@ -85,6 +86,8 @@ namespace ALUSimulation.ViewModel
             {
                 _WybranaOperacja = value;
                 RaisePropertyChanged("WybranaOperacja");
+
+                Utils.WriteLog("Wybrano operację " + WybranaOperacja);
             }
         }
 

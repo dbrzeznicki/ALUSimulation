@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TMRSim;
 
 namespace ALUSimulation.ViewModel
 {
@@ -52,9 +53,16 @@ namespace ALUSimulation.ViewModel
             {
                 _IsCheckedBox1 = value;
                 if (_IsCheckedBox1 == true)
+                {
                     StrokeColor1 = "RED";
+                    Utils.WriteLog("Zaznaczono błąd na wyjściu ALU1");
+                }     
                 else
+                {
                     StrokeColor1 = "Black";
+                    Utils.WriteLog("Odznaczono błąd na wyjściu ALU1");
+                }
+                    
                 RaisePropertyChanged("IsCheckedBox1");
             }
         }
@@ -69,9 +77,15 @@ namespace ALUSimulation.ViewModel
             {
                 _IsCheckedBox2 = value;
                 if (_IsCheckedBox2 == true)
+                {
                     StrokeColor2 = "RED";
+                    Utils.WriteLog("Zaznaczono błąd na wyjściu ALU1");
+                }
                 else
+                {
                     StrokeColor2 = "Black";
+                    Utils.WriteLog("Odznaczono błąd na wyjściu ALU1");
+                }
                 RaisePropertyChanged("IsCheckedBox2");
             }
         }
@@ -86,9 +100,15 @@ namespace ALUSimulation.ViewModel
             {
                 _IsCheckedBox3 = value;
                 if (_IsCheckedBox3 == true)
+                {
                     StrokeColor3 = "RED";
+                    Utils.WriteLog("Zaznaczono błąd na wyjściu ALU1");
+                }
                 else
+                {
                     StrokeColor3 = "Black";
+                    Utils.WriteLog("Odznaczono błąd na wyjściu ALU1");
+                }
                 RaisePropertyChanged("IsCheckedBox3");
             }
         }

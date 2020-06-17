@@ -109,6 +109,16 @@ namespace ALUSimulation.ViewModel
 
                 WizualizacjaViewModel.Instance.OperandABinary = Utils.SbyteToBinaryString(sbyte.Parse(ALUViewModel.Instance.OperandA), 8);
                 WizualizacjaViewModel.Instance.OperandBBinary = Utils.SbyteToBinaryString(sbyte.Parse(ALUViewModel.Instance.OperandB), 8);
+
+                Utils.WriteLog("Kliknięto start");
+                Utils.WriteLog("Parametry uruchomienia: " +
+                    "\nOperand A: " + ALUViewModel.Instance.OperandA +
+                    "\nOperand B: " + ALUViewModel.Instance.OperandB +
+                    "\nOperacja: " + ALUViewModel.Instance.WybranaOperacja +
+                    "\nBłąd ALU1: " + BledyViewModel.Instance.IsCheckedBox1.ToString() + " - " + WizualizacjaViewModel.Instance.WynikALU1.ToString() +
+                    "\nBłąd ALU2: " + BledyViewModel.Instance.IsCheckedBox2.ToString() + " - " + WizualizacjaViewModel.Instance.WynikALU2.ToString() +
+                    "\nBłąd ALU3: " + BledyViewModel.Instance.IsCheckedBox3.ToString() + " - " + WizualizacjaViewModel.Instance.WynikALU3.ToString() +
+                    "\nWynik: " + WynikDecimal.ToString());
             }
             else
             {
